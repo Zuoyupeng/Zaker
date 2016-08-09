@@ -18,9 +18,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-
-
-        x.Ext.setDebug(BuildConfig.DEBUG);
+        //iniiji
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(10000L, java.util.concurrent.TimeUnit.MILLISECONDS)
                 .readTimeout(10000L, java.util.concurrent.TimeUnit.MILLISECONDS)
