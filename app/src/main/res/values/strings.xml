@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ZAKER</string>
+    <string name="first_rb">订阅</string>
+    <string name="second_rb">热点</string>
+    <string name="beijing_rb">北京</string>
+    <string name="play_rb">社区</string>
+    <string name="user_rb">用户</string>
+    <string name="search_toolbar">频道</string>
+    <string name="splash_error">初始化网络失败</string>
+</resources>

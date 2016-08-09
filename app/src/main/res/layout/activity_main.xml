@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/titleTab">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/app_name"
+            android:textColor="@color/writhe"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/title_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62sp"
+            android:background="@drawable/selector_search" />
+        <Button
+            android:id="@+id/title_user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_personal_normal"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_rg"
+        android:layout_below="@+id/title_bar" />
+
+    <RadioGroup
+        android:id="@+id/bottom_rg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bottom_rb_subscribe"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_one"
+            android:button="@null"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/bottom_rb_hot"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_two"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/bottom_rb_loc"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_three"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/bottom_rb_play"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_four"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/bottom_rb_user"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_five"
+            android:button="@null" />
+    </RadioGroup>
+
+</RelativeLayout>

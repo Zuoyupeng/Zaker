@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hot_four_item_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="进口跑车送维修店维修后里程数陡增1200公里"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/hot_four_iv"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/hot_four_item_tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="10dp"
+        android:text="武汉晚报"
+        android:textColor="#aaa"
+        android:textSize="12sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ddd"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+</LinearLayout>

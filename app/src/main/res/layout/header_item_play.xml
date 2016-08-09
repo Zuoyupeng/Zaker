@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/header_item_iv"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        />
+
+    <TextView
+        android:id="@+id/header_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="130dp"
+        android:textColor="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        />
+
+</FrameLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/normal_shape"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/special_item_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/normal_shape"/>
+
+            <TextView
+                android:id="@+id/special_item_iv_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="卡饭卡打饭刻录大师"
+                android:textColor="#aaa"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ddd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/special_item_tv_one"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="哈哈哈撒到哈市"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ddd" />
+
+            <TextView
+                android:id="@+id/special_item_tv_two"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="啊等哈说风骚ijoiajfdio"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ddd" />
+
+            <TextView
+                android:id="@+id/special_item_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="kdfasdpofkaspfkdasp"
+                android:textColor="#00f"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

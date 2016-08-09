@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/titleTab">
+
+        <TextView
+            android:id="@+id/comm_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/app_name"
+            android:textColor="@color/writhe"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.liaoinstan.springview.widget.SpringView
+            android:id="@+id/comm_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/comm_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#0000"
+                android:listSelector="#0000" />
+        </com.liaoinstan.springview.widget.SpringView>
+
+        <ImageView
+            android:id="@+id/community_iv_error"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_video_retry"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

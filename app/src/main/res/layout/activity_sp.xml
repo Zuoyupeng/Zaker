@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/sp_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/titleTab">
+
+        <ImageView
+            android:id="@+id/sp_title_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/sp_title_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10sp"
+            android:background="@drawable/ic_toolbar_back_white" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sp_title_bar">
+
+        <com.liaoinstan.springview.widget.SpringView
+            android:id="@+id/sp_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/sp_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#0000"
+                android:listSelector="#0000" />
+
+        </com.liaoinstan.springview.widget.SpringView>
+        <ImageView
+            android:id="@+id/sp_iv_error"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_video_retry"
+            android:visibility="gone" />
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/news_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/titleTab">
+
+        <Button
+            android:id="@+id/news_title_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10sp"
+            android:background="@drawable/ic_toolbar_back_white" />
+
+        <TextView
+            android:id="@+id/news_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/search_toolbar"
+            android:textColor="@color/writhe"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/news_lv"
+        android:layout_below="@+id/news_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

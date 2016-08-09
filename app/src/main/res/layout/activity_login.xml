@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/titleTab">
+
+        <Button
+            android:id="@+id/login_title_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16sp"
+            android:background="@drawable/shake_close" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_zaker_rl"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/titleTab">
+        <ImageView
+            android:id="@+id/login_zaker_iv"
+            android:layout_width="150dp"
+            android:layout_height="34dp"
+            android:background="@drawable/cover_zaker_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/big_star"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/login_zaker_iv"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/login_zaker_rl">
+        <ImageView
+            android:id="@+id/login_zaker_wx"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/login_zaker_qq"
+            android:background="@drawable/ic_big_sns_wx_login"
+            android:layout_marginRight="40dp"/>
+        <ImageView
+            android:id="@+id/login_zaker_qq"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/ic_big_sns_qq_login"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/login_zaker_sina"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@+id/login_zaker_qq"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/ic_big_sns_sina_login"
+            />
+    </RelativeLayout>
+</RelativeLayout>
