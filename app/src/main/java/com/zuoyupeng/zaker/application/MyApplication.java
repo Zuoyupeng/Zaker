@@ -17,6 +17,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //iny
         x.Ext.init(this);
         x.Ext.setDebug(BuildConfig.DEBUG);
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
