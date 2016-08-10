@@ -45,15 +45,17 @@ public class ReadActivity extends FragmentActivity {
     DbManager dbManagerRead;
     SharedPreferences sharedPreferences;
     ProgressWheel progressWheel;
-    ImageView iv;
-    int count = 0;
     private List<ReadBean> listMore;
-    public String ttt;
-    public String ima;
-    public String nextUrl;
-    private int allCount;
+    ImageView iv;
+    int count = 0;//初始页count
+    public String ttt;//外层名
+    public String ima;//标题图片
+    public String nextUrl;//下一条网址
+    private int allCount;//全部页数
     private boolean isFirst = true;
-
+    /**
+     * 无网络加载 进度框并显示重新加载图片，及点击重新加载
+     */
     Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -69,6 +71,7 @@ public class ReadActivity extends FragmentActivity {
             return false;
         }
     });
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read);
@@ -77,16 +80,18 @@ public class ReadActivity extends FragmentActivity {
     }
 
     private void initView() {
-        //创建新闻页数据库
-        DbManager.DaoConfig daoConfig = XUtilDbRead.getDaoConfig();
+        DbManager.DaoConfig daoConfig = XUtilDbRead.getDaoConfig();//创建新闻页数据库
         dbManagerRead = x.getDb(daoConfig);
-        sharedPreferences = getPreferences(MODE_PRIVATE);
+        sharedPreferences = getPreferences(MODE_PRIVATE);//Share存储
         vp = (ViewPager) findViewById(R.id.view_pager);
-        progressWheel = (ProgressWheel) findViewById(R.id.progress_wheel);
-        iv = (ImageView) findViewById(R.id.read_iv_error);
+        progressWheel = (ProgressWheel) findViewById(R.id.progress_wheel);//进度框
+        iv = (ImageView) findViewById(R.id.read_iv_error);//无网络图片
     }
 
     private void setData() {
+        /*
+        实现进度框显示
+         */
         progressWheel.setProgress(0.0f);
         progressWheel.setBarColor(Color.BLUE);
         progressWheel.setCallback(new ProgressWheel.ProgressCallback() {
@@ -99,6 +104,7 @@ public class ReadActivity extends FragmentActivity {
                 }
             }
         });
+        //加载网络
         onReadNet();
     }
 
@@ -110,7 +116,7 @@ public class ReadActivity extends FragmentActivity {
         LogUtils.i("ReadActivity", name);
         OkHttpUtils.get().url(url).build().execute(new StringCallback() {
             public void onError(Call call, Exception e, int i) {
-                handler.sendEmptyMessageDelayed(0,3000);
+                handler.sendEmptyMessageDelayed(0, 3000);
             }
 
             public void onResponse(String s, int i) {
