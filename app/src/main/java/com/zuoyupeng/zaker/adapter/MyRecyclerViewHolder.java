@@ -126,7 +126,7 @@ public class MyRecyclerViewHolder extends RecyclerView.Adapter<RecyclerView.View
 
     //item布局的Size
     private SQLIteTable getItem(int position) {
-        return list.get(position-1);
+        return list.get(position);
     }
 
     //添加0位头布局

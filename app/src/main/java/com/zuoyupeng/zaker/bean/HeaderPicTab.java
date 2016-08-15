@@ -20,6 +20,7 @@ public class HeaderPicTab {
         public Block block_info;
         public Article article;
         public Post post;
+        public Web web;
     }
 
     public class Topic{
@@ -36,5 +37,9 @@ public class HeaderPicTab {
 
     public class Post{
         public String weburl;
+    }
+
+    public class Web{
+        public String url;
     }
 }

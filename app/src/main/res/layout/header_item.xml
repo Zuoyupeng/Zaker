@@ -16,7 +16,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="160dp"
         android:text="轮播图"
-        android:textColor="#fff"
+        android:textColor="#ccc"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
         />

@@ -1,6 +1,7 @@
 package com.zuoyupeng.zaker.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.widget.ImageView;

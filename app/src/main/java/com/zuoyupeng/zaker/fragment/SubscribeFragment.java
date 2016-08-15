@@ -153,22 +153,27 @@ public class SubscribeFragment extends BaseFragment {
             @Override
             public void onItemClick(int position) {
                 if (listHeader.get(position).block_info == null && listHeader.get(position).topic
-                        == null&&listHeader.get(position).post == null) {
+                        == null&&listHeader.get(position).post == null&&listHeader.get(position).web == null) {
                     Intent intent = new Intent(getActivity(), WebUrlActivity.class);
                     intent.putExtra("weburl", listHeader.get(position).article.weburl);
                     startActivity(intent);
-                } else if (listHeader.get(position).block_info == null&&
-                        listHeader.get(position).topic != null&&listHeader.get(position).post == null) {
+                } else if (listHeader.get(position).block_info == null&&listHeader.get(position).web == null
+                        &&listHeader.get(position).topic != null&&listHeader.get(position).post == null) {
                     Intent intent = new Intent(getActivity(), SpActivity.class);
                     intent.putExtra("api_url", listHeader.get(position).topic.api_url);
                     intent.putExtra("promotion_img", listHeader.get(position).promotion_img);
                     startActivity(intent);
                 }else if(listHeader.get(position).post != null&&listHeader.get(position).block_info == null
-                        &&listHeader.get(position).topic == null){
+                        &&listHeader.get(position).topic == null&&listHeader.get(position).web == null){
                     Intent intent = new Intent(getActivity(), WebUrlActivity.class);
                     intent.putExtra("weburl", listHeader.get(position).post.weburl);
                     startActivity(intent);
-                }else {
+                }else if(listHeader.get(position).web!= null&&listHeader.get(position).block_info == null
+                        &&listHeader.get(position).topic == null&&listHeader.get(position).post == null){
+                    Intent intent = new Intent(getActivity(), WebUrlActivity.class);
+                    intent.putExtra("weburl", listHeader.get(position).web.url);
+                    startActivity(intent);
+                } else {
                     Intent intent = new Intent(getActivity(), ReadActivity.class);
                     intent.putExtra("Api_url", listHeader.get(position).block_info.api_url);
                     intent.putExtra("TitleNews", listHeader.get(position).block_info.title);
