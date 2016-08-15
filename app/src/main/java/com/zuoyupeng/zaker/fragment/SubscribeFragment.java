@@ -107,8 +107,8 @@ public class SubscribeFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(getActivity(), ReadActivity.class);
-                intent.putExtra("Api_url", listGridView.get(position).getApi_url());
-                intent.putExtra("TitleNews", listGridView.get(position).getTitleNews());
+                intent.putExtra("Api_url", listGridView.get(position+1).getApi_url());
+                intent.putExtra("TitleNews", listGridView.get(position+1).getTitleNews());
                 startActivity(intent);
             }
 
@@ -217,14 +217,14 @@ public class SubscribeFragment extends BaseFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("温馨提示");
         builder.setIcon(R.drawable.ding);
-        builder.setMessage("您要删除" + listGridView.get(position).getTitleNews() + "吗?");
+        builder.setMessage("您要删除" + listGridView.get(position+1).getTitleNews() + "吗?");
         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (position < 5) {
+                if (position+1 < 7) {
                     Toast.makeText(getActivity(), "至少留点看嘛", Toast.LENGTH_SHORT).show();
                 } else {
-                    viewHolder.deleteData(listGridView.get(position).getId(), position);
+                    viewHolder.deleteData(listGridView.get(position+1).getId(), position+1);
                     Toast.makeText(getActivity(), "我还会回来的!!!", Toast.LENGTH_SHORT).show();
                 }
             }

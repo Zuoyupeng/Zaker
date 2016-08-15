@@ -149,9 +149,9 @@ public class MyRecyclerViewHolder extends RecyclerView.Adapter<RecyclerView.View
 
     //删除list数据
     public void deleteData(int i,int position){
-        list.remove(position+1);
+        list.remove(position);
         delete(i);
-        notifyItemRemoved(position+1);
+        notifyItemRemoved(position);
     }
 
     //实例化控件
